@@ -1,0 +1,55 @@
+<head>
+
+</head>
+<body>
+<div id="main-container">
+  <h1>Users:</h1>
+
+
+  <div *ngFor="let user of users">
+    <div>{{user.firstname}} {{user.lastname}}
+      <button (click)="openDialogEdit(user)">Редактировать</button>
+      <button (click)="deleteUser(user.id)">Удалить</button> </div>
+  </div>
+
+
+  <div>
+    <form>
+      <input type="search" (ngModelChange)="searchUser(key.value)" #key="ngModel" ngModel
+             name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search user..." required>
+    </form>
+  </div>
+
+
+  <div class="forAddButton">
+    <button class="btn btn-secondary" (click)="openDialogAdd()">Добавить ученика</button>
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+

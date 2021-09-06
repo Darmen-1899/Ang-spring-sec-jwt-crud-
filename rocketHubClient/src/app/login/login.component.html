@@ -1,0 +1,28 @@
+<html>
+
+<body>
+<div class="divForm">
+  <h1>Login </h1>
+  <form action="login" method="post">
+    <div class="forms">
+      <div class="forms__text">Логин</div>
+      <input class="forms__input" type="text" [(ngModel)] = "username" name="username" required="required">
+    </div>
+    <div class="forms">
+      <div class="forms__text">Пароль</div>
+      <input class="forms__input" type="password" [(ngModel)] = "password" name="password" required="required">
+    </div>
+    <div class="button">
+      <button type="button" class="btn btn-secondary" (click)="checkLogin()" >Войти</button>
+    </div>
+    <div class="invalid" *ngIf="invalidLogin">
+      Логин или пароль введены неверно
+    </div>
+  </form>
+</div>
+
+
+</body>
+
+</html>
+

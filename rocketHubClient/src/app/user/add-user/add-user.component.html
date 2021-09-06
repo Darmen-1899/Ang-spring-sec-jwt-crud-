@@ -1,0 +1,47 @@
+
+<div>
+  <form title="addModal" id="addUserModal">
+    <div class="forms">
+      <div class="forms__text">Фамилию:</div>
+      <input class="forms__input" type="text" [(ngModel)] = "user.lastname" name="lastname"><br>
+    </div>
+    <div class="forms">
+      <div class="forms__text">Имя:</div>
+      <input class="forms__input" type="text" [(ngModel)] = "user.firstname" name="firstname"><br>
+    </div>
+    <div class="forms">
+      <div class="forms__text">Логин:</div>
+      <input class="forms__input" type="text" [(ngModel)] = "user.username" name="username"><br>
+    </div>
+    <div class="forms">
+      <div class="forms__text">Пароль:</div>
+      <input class="forms__input" type="text" [(ngModel)] = "user.password" name="password"><br>
+    </div><div class="forms">
+    <div class="forms__text">Роль:</div>
+<!--    <input class="forms__input" type="text" list="roleList" [(ngModel)] = "user.role" name="role">-->
+<!--    <datalist id="roleList">-->
+<!--      <option>user</option>-->
+<!--      <option>admin</option>-->
+<!--    </datalist><br>-->
+    <select [(ngModel)] = "user.role" name="role" >
+      <option>ADMIN</option>
+      <option>USER</option>
+    </select>
+    </div>
+    <div class="forms">
+      <div class="forms__text">Позиция:</div>
+      <input class="forms__input" type="text" [(ngModel)] = "user.position" name="position"><br>
+    </div>
+    <br>
+    <div class="button">
+      <button type="button" class="btn btn-secondary" (click)="closeWindow()">Отменить</button>
+      <button type="button" style="margin-left: 5px" class="btn btn-secondary" (click)="addUserComponent()">Добавить</button>
+    </div>
+    <br>
+    <div class="invalid" *ngIf="showError">
+      Заполните все поля
+    </div>
+  </form>
+
+
+
